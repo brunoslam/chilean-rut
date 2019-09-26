@@ -16,8 +16,7 @@ var ChileanRut = function () {
 		value: function formatOnKeyPress(selector) {
 			//document.getElementById("")
 			var input = document.querySelector(selector);
-
-			input.addEventListener("keyup", (e) => {
+			input.addEventListener('keyup', function(e){
 				if (input.value.indexOf('-') > -1) {
 					var dv = input.value.split("-")
 				}
@@ -31,7 +30,7 @@ var ChileanRut = function () {
 			//document.getElementById("")
 			var input = document.querySelector(selector);
 
-			input.addEventListener("change", (e) => {
+			input.addEventListener("change", function(e) {
 				/*if(input.value.indexOf('-') > -1){
 
 					input.value = this.format(input.value.split("-")[0], input.value.split("-")[1]);	
@@ -51,10 +50,11 @@ var ChileanRut = function () {
 			/*if(digitoVerificador){
 				var rutMilificado = sRut.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 				sRutFormateado = `${rutMilificado}-${digitoVerificador}`;
-			}else */if (sRut.length > 1) {
+			}else */
+			if (sRut.length > 1) {
 				var xdRut = sRut.substring(0, sRut.length - 1).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 				var xdDv = sRut.substring(sRut.length - 1, sRut.length);
-				sRutFormateado = `${xdRut}-${xdDv}`;
+				sRutFormateado = xdRut+"-"+xdDv;
 			}
 
 			return sRutFormateado;
