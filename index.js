@@ -54,7 +54,7 @@ var ChileanRut = function () {
 			if (sRut.length > 1) {
 				var xdRut = sRut.substring(0, sRut.length - 1).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 				var xdDv = sRut.substring(sRut.length - 1, sRut.length);
-				sRutFormateado = xdRut+"-"+xdDv;
+				sRutFormateado = xdRut+xdDv;
 			}
 
 			return sRutFormateado;
