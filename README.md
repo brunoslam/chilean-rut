@@ -3,7 +3,7 @@
 To install:
 
 ```
-npm install --save chilean-rut
+npm install --save chilean-rut-v2
 ```
 
 To use:
